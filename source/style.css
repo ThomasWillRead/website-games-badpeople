@@ -1,0 +1,134 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Aptos', sans-serif;
+    overflow-x: hidden;
+    width: 56.25vh;
+    max-height: calc(100vh - 15.625vh);
+    margin-top: 15.625vh;
+    font-weight: bold;
+}
+
+
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 2.755vh 5.51vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(15.625vh - 5.51vh); 
+    width: calc(56.25vh - 11.1vh);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+header img {
+    height: 70%;
+}
+
+
+
+#nav-button{
+    background-color: #000000;
+    color: white;
+    font-size: 8vh;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+#nav-bar {
+    position: fixed;
+    right: calc(100vw - 56.25vh);
+    top: 15.625vh;
+    width: 0;
+    height: 100vh;
+    background-color: #000000;
+    font-size: 5vh;
+    font-weight: bold;
+    padding-top: 2vh;
+    transition: width 0.7s ease;
+    z-index: 99;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#nav-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 2.755vh;
+    width: auto;
+    align-items: center;
+    display: block;
+}
+#nav-bar a:hover{
+    font-weight: bold;
+}
+#nav-bar div {
+    padding-left: 0;
+}
+#nav-bar-sub a{
+    border-bottom: none;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    z-index: 98;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.card {
+    background-color: #ffffff;
+    color: #000000;
+    position: absolute;
+    top: 25vh;
+    left: 5.6vh;
+    width: 41vh;
+    height: 63vh;
+    min-height: 63vh;       /* prevent shrinking */
+    border-radius: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vh;
+    text-align: center;
+    line-height: 1.2;       /* prevent text jumps */
+    padding: 2vh;
+    font-weight: bold;
+
+    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.5);
+
+    transition: left 1.2s ease, transform 0.6s ease, opacity 0.6s ease;
+    word-wrap: break-word;
+
+    transform-origin: center center; /* for smooth pop from back */
+}
+
+
+#guide {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+}
+
+#guide h1 {
+    text-align: center;
+}
